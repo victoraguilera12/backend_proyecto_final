@@ -9,7 +9,7 @@ const path = require('path');
 // const bcrypt = require("bcryptjs");
 
 const app = express();
-app.listen(3000, console.log("server arriba"));
+app.listen(process.env.PORT, console.log("server arriba"));
 app.use(cors());
 app.use(express.json());
 require('./src/schemas/usuarios/controller')(app);
